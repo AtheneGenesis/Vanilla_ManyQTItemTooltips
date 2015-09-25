@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: ManyQTItemTooltips
+## Notes: Allows up to 20 item tooltips to be open at once.
+## Notes-frFR: Permet d'afficher jusqu'à 20 info-bulles d'objet à la fois.
+## Author: Athene (based on Freki's Addon)
+ManyQTItemTooltips.xml

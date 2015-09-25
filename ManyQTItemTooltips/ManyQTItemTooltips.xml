@@ -1,0 +1,79 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\..\FrameXML\UI.xsd">
+	<Script file="ManyQTItemTooltips.lua"/>
+	<Frame name="MQTIT_Frame" parent="UIParent" hidden="false">
+		<Scripts>
+			<OnLoad>
+				MQTIT_L()
+			</OnLoad>
+		</Scripts>
+	</Frame>
+	<GameTooltip name="MQTIT_Tooltip_Template" inherits="GameTooltipTemplate" parent="UIParent" enableMouse="true" toplevel="true" movable="true" frameStrata="HIGH" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="128" y="64"/>
+		</Size>
+		<Anchors>
+			<Anchor point="BOTTOM">
+				<Offset>
+					<AbsDimension x="0" y="80"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<Button name="$parent_CloseButton">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						this:GetParent():Hide();
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Down"/>
+				<HighlightTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Highlight" alphaMode="ADD"/>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				GameTooltip_OnLoad();
+				this:SetPadding(16);
+				this:RegisterForDrag("LeftButton");
+			</OnLoad>
+			<OnDragStart>
+				this:StartMoving();
+			</OnDragStart>
+			<OnDragStop>
+				this:StopMovingOrSizing();
+				ValidateFramePosition(this);
+			</OnDragStop> 
+		</Scripts>
+	</GameTooltip>
+	<GameTooltip name="MQTIT_Tooltip_1" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_2" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_3" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_4" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_5" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_6" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_7" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_8" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_9" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_10" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_11" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_12" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_13" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_14" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_15" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_16" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_17" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_18" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_19" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+	<GameTooltip name="MQTIT_Tooltip_20" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MQTIT_Tooltip_Template"/>
+</Ui>
